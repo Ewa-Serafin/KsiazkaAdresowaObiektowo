@@ -18,8 +18,10 @@ class UzytkownikMenedzer {
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     PlikZUzytkownikami plikZUzytkownikami;
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
