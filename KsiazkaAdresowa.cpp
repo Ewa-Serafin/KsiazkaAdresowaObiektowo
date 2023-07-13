@@ -36,3 +36,10 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
 
 }
 
+char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego() {
+    return wyswietlMenu.wybierzOpcjeZMenuGlownego();
+}
+
+char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
+    return wyswietlMenu.wybierzOpcjeZMenuUzytkownika();
+}
