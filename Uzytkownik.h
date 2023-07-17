@@ -22,4 +22,4 @@ public:
 
 };
 
-#endif
+#endif /* UZYTKOWNIK_H */
