@@ -6,7 +6,7 @@
 #include "UzytkownikMenedzer.h"
 #include "AdresatMenedzer.h"
 #include "MetodyPomocnicze.h"
-#include "WyswietlMenu.h"
+
 
 using namespace std;
 
@@ -14,13 +14,11 @@ class KsiazkaAdresowa {
 
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer adresatMenedzer;
-    WyswietlMenu wyswietlMenu;
-    string NAZWAPLIKUZADRESATAMI;
 
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
-        adresatMenedzer(nazwaPlikuZAdresatami), wyswietlMenu(){};
+        adresatMenedzer(nazwaPlikuZAdresatami){};
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
@@ -29,15 +27,11 @@ public:
 
     void wylogujUzytkownika();
 
-
-    void wylogowanieUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 
     bool czyUzytkownikJestZalogowany();
 
-    char wybierzOpcjeZMenuGlownego();
-    char wybierzOpcjeZMenuUzytkownika();
 
 
 };

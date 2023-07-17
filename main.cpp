@@ -1,4 +1,5 @@
 #include "KsiazkaAdresowa.h"
+#include "WyswietlMenu.h"
 
 int main() {
 
@@ -9,7 +10,7 @@ int main() {
     while (true) {
         if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany()) {
 
-            wybor = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
+            wybor = WyswietlMenu::wybierzOpcjeZMenuGlownego();
 
             switch (wybor) {
             case '1':
@@ -30,7 +31,7 @@ int main() {
 
         } else {
 
-            wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
+            wybor = WyswietlMenu::wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor) {
             case '1':
@@ -46,7 +47,6 @@ int main() {
                 ksiazkaAdresowa.wylogujUzytkownika();
                 break;
             }
-
         }
     }
 

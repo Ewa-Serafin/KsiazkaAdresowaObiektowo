@@ -37,11 +37,3 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
     adresatMenedzer.wyswietlWszystkichAdresatow();
 
 }
-
-char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego() {
-    return wyswietlMenu.wybierzOpcjeZMenuGlownego();
-}
-
-char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
-    return wyswietlMenu.wybierzOpcjeZMenuUzytkownika();
-}
