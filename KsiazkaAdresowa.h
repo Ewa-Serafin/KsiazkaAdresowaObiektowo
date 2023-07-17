@@ -20,15 +20,17 @@ class KsiazkaAdresowa {
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
-        adresatMenedzer(nazwaPlikuZAdresatami, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika())
-        , wyswietlMenu(), NAZWAPLIKUZADRESATAMI(nazwaPlikuZAdresatami) {};
+        adresatMenedzer(nazwaPlikuZAdresatami), wyswietlMenu(){};
 
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+
     void wylogujUzytkownika();
 
+
+    void wylogowanieUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 

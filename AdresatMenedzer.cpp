@@ -1,5 +1,10 @@
 #include "AdresatMenedzer.h"
 
+void AdresatMenedzer::setIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
+{
+    this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
+}
+
 void AdresatMenedzer::dodajAdresata() {
     Adresat adresat;
     system("cls");
@@ -19,7 +24,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     Adresat adresat;
 
     adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
-    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -40,6 +45,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
 
     return adresat;
 }
+
 void AdresatMenedzer::wyswietlWszystkichAdresatow() {
 
     system("cls");
@@ -65,3 +71,6 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
+void AdresatMenedzer::pobierzAdresatowZalogowanegoUzytkownika(){
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}

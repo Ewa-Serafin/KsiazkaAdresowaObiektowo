@@ -11,9 +11,11 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 void KsiazkaAdresowa::logowanieUzytkownika() {
     uzytkownikMenedzer.logowanieUzytkownika();
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
-        adresatMenedzer = AdresatMenedzer(NAZWAPLIKUZADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenedzer.setIdZalogowanegoUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenedzer.pobierzAdresatowZalogowanegoUzytkownika();
     }
 }
+
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany() {
 
     return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
