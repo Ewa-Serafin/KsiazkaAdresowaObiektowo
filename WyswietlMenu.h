@@ -4,12 +4,10 @@
 
 using namespace std;
 
-class WyswietlMenu{
-
-char wybor;
+class WyswietlMenu {
 public:
 
-char wybierzOpcjeZMenuGlownego();
- char wybierzOpcjeZMenuUzytkownika();
+    static char wybierzOpcjeZMenuGlownego();
+    static char wybierzOpcjeZMenuUzytkownika();
 
 };
