@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 #include "KsiazkaAdresowa.h"
 #include "WyswietlMenu.h"
 
@@ -49,7 +53,6 @@ int main() {
             }
         }
     }
-
     return 0;
 }
 

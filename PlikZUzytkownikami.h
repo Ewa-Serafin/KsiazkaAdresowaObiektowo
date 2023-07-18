@@ -13,9 +13,9 @@
 using namespace std;
 
 class PlikZUzytkownikami : public PlikTekstowy {
+
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-
 
 public:
 
