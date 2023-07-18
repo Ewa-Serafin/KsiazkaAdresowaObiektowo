@@ -16,7 +16,7 @@ class PlikZAdresatami : public PlikTekstowy {
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
 
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 
 public:
@@ -24,11 +24,10 @@ public:
     PlikZAdresatami(string nazwaPliku) : PlikTekstowy(nazwaPliku) {
         idOstatniegoAdresata = 0;
     };
-
-    void dopiszAdresataDoPliku(Adresat adresat);
     int pobierzIdOstatniegoAdresata();
+    bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
-    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+
 };
 
 #endif

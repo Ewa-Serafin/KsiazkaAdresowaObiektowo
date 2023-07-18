@@ -11,45 +11,6 @@ void UzytkownikMenedzer::rejestracjaUzytkownika() {
     system("pause");
 }
 
-Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
-    Uzytkownik uzytkownik;
-
-    uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
-
-    string login;
-    do {
-        cout << "Podaj login: ";
-        cin >> login;
-        uzytkownik.ustawLogin(login);
-    }
-
-    while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
-
-    string haslo;
-    cout << "Podaj haslo: ";
-    cin >> haslo;
-    uzytkownik.ustawHaslo(haslo);
-
-    return uzytkownik;
-}
-
-int  UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
-    if (uzytkownicy.empty() == true)
-        return 1;
-    else
-        return uzytkownicy.back().pobierzId() + 1;
-}
-
-bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
-    for (size_t i =0; i< uzytkownicy.size(); i++) {
-        if (uzytkownicy[i].pobierzLogin() == login) {
-            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
-            return true;
-        }
-    }
-    return false;
-}
-
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
     for (size_t i =0; i< uzytkownicy.size(); i++) {
         cout << uzytkownicy[i].pobierzId() << endl;
@@ -76,7 +37,7 @@ void UzytkownikMenedzer::logowanieUzytkownika() {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr -> pobierzId();
-                    return; // itr -> pobierzId();
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -118,4 +79,41 @@ void UzytkownikMenedzer::wylogujUzytkownika() {
     cout << "Zostales poprawnie wylogowany" << endl;
     Sleep(1000);
 }
+Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
+    Uzytkownik uzytkownik;
 
+    uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
+
+    string login;
+    do {
+        cout << "Podaj login: ";
+        cin >> login;
+        uzytkownik.ustawLogin(login);
+    }
+
+    while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
+
+    string haslo;
+    cout << "Podaj haslo: ";
+    cin >> haslo;
+    uzytkownik.ustawHaslo(haslo);
+
+    return uzytkownik;
+}
+
+int  UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
+    if (uzytkownicy.empty() == true)
+        return 1;
+    else
+        return uzytkownicy.back().pobierzId() + 1;
+}
+
+bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
+    for (size_t i =0; i< uzytkownicy.size(); i++) {
+        if (uzytkownicy[i].pobierzLogin() == login) {
+            cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
+            return true;
+        }
+    }
+    return false;
+}
