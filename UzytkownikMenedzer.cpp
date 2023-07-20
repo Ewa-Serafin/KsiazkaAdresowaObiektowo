@@ -79,6 +79,7 @@ void UzytkownikMenedzer::wylogujUzytkownika() {
     cout << "Zostales poprawnie wylogowany" << endl;
     Sleep(1000);
 }
+
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
     Uzytkownik uzytkownik;
 
