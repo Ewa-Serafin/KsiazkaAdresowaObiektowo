@@ -33,11 +33,13 @@ public:
     void logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogujUzytkownika();
+
     void dodajAdresata();
-    void wyswietlWszystkichAdresatow();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void wyswietlWszystkichAdresatow();
     void usunAdresata();
+    void edytujAdresata();
 };
 
 #endif

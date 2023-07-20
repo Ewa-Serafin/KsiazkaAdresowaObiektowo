@@ -47,24 +47,20 @@ int main() {
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
-               ksiazkaAdresowa.usunAdresata();
-               // idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-              //  edytujAdresata(adresaci);
+                ksiazkaAdresowa.edytujAdresata();
                 break;
-
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogujUzytkownika();
                 break;
-
             }
         }
     }
-
     return 0;
 }
 

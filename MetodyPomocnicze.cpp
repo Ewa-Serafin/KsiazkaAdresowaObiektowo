@@ -53,13 +53,11 @@ string MetodyPomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku) {
     return liczba;
 }
 
-int MetodyPomocnicze::wczytajLiczbeCalkowita()
-{
+int MetodyPomocnicze::wczytajLiczbeCalkowita() {
     string wejscie = "";
     int liczba = 0;
 
-    while (true)
-    {
+    while (true) {
         getline(cin, wejscie);
 
         stringstream myStream(wejscie);
