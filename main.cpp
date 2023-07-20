@@ -1,7 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
 #include "KsiazkaAdresowa.h"
 #include "WyswietlMenu.h"
 
@@ -42,17 +38,33 @@ int main() {
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
+                ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                break;
+            case '5':
+               ksiazkaAdresowa.usunAdresata();
+               // idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                break;
+            case '6':
+              //  edytujAdresata(adresaci);
+                break;
+
+            case '7':
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+                break;
+            case '8':
                 ksiazkaAdresowa.wylogujUzytkownika();
                 break;
+
             }
         }
     }
+
     return 0;
 }
 
